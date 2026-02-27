@@ -39,3 +39,5 @@ class otheraccessories(models.Model):
     Description= models.TextField(max_length=100)
     Price=models.IntegerField(max_length=5)
     Type= models.CharField(max_length=15)
+
+    
