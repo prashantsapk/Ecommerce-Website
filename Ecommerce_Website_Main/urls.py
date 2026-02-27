@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
@@ -29,10 +31,6 @@ urlpatterns = [
     path('otheraccessories/',views.otheraccessories,name="otheraccessories"),
     path('login/',views.login,name="login"),
     path('signup/',views.signup,name="signup"),
-    path('user/',include('Ecommerce_Models_App.urls')),
-  
-  
-  
- 
+    path('user/',include('Ecommerce_Models_App.urls')),  
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
