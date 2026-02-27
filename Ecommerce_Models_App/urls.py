@@ -20,15 +20,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name="home"),
-    path('pricing/',views.pricing,name="pricing"),
-    path('jeans/',views.jeans,name="jeans"),
-    path('tshirts/',views.tshirts,name="tshirts"),
-    path('sweaters/',views.sweaters,name="sweaters"),
-    path('jacketsandbagpacks/',views.jacketsandbagpacks,name="jacketsandbagpacks"),
-    path('otheraccessories/',views.otheraccessories,name="otheraccessories"),
-    path('login/',views.login,name="login"),
-    path('signup/',views.signup,name="signup"),
-   
 
 ]

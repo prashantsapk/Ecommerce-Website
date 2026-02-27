@@ -5,20 +5,29 @@ def home(request):
     return render(request,'Website/homepage.html')
 
 def pricing(request):
-    return HttpResponse("You are at pricing page")
+    return render(request,"Website/pricing.html")
 
 def jeans(request):
-    return HttpResponse("You are at jeans page")
+    return render(request,"Website/jeans.html")
 
 def tshirts(request):
-    return HttpResponse("You are at tshirts page")
+    return render(request,"Website/tshirts.html")
 
 def sweaters(request):
-    return HttpResponse("You are at Sweaters page")
+    return render(request,"Website/sweaters.html")
 
 def jacketsandbagpacks(request):
-    return HttpResponse("You are at Jacket and Bagpacks page")
+    return render(request,"Website/jacketsandbagpacks.html")
 
 def otheraccessories(request):
-    return HttpResponse("You are at Acessories page")
+    return render(request,"Website/otheraccessories.html")
+
+def login(request):
+    return render(request,"Website/login.html")
+
+def signup(request):
+    return render(request,"Website/signup.html")
+
+
+
 

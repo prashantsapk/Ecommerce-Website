@@ -1,38 +1,39 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Prala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Prala</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pricing">Pricing</a>
+          <a class="nav-link" href="http://127.0.0.1:8000/pricing">Pricing</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="jeans">Jeans</a></li>
-            <li><a class="dropdown-item" href="tshirts">Tshirts</a></li>
-            <li><a class="dropdown-item" href="sweaters">Sweaters</a></li>
-            <li><a class="dropdown-item" href="jacketsandbagpacks">Jackets and Bagpacks</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/jeans">Jeans</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/tshirts">Tshirts</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/sweaters">Sweaters</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/jacketsandbagpacks">Jackets and Bagpacks</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="otheraccessories">Other accessories</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/otheraccessories">Other accessories</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -43,12 +44,22 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+     <a href="http://127.0.0.1:8000/signup/"><button class="btn btn-outline-success" type="submit">Signup</button></a> 
+     <a href="http://127.0.0.1:8000/login/"><button class="btn btn-outline-success" type="submit">Login</button></a>
     </div>
   </div>
  </nav>
 
    {% block content %}
    {% endblock  %}
+    
+   <br>
+   <footer class="bg-body-tertiary text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2026 Copyright:
+    <a class="text-body" href="http://127.0.0.1:8000/">Prala</a>
+  </div>
+ </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
