@@ -1,0 +1,13 @@
+
+{% extends 'Website/layout.html' %}
+
+{% block content %}
+   <h1>Buy your favourite Tshirts here !</h1><br><br>
+   <div center>
+   {% for i in a %}
+    {{i.Name}}<br>
+    <img src=" {{i.Image.url}}" alt="">
+   {% endfor %}
+   <div>
+    
+ {% endblock %}
