@@ -28,5 +28,6 @@ urlpatterns = [
     path('otheraccessories/',views.otheraccessoriess,name="otheraccessories"),
     path('login/',views.logins,name="login"),
     path('signup/',views.signups,name="signup"),
+    path('tshirts/<int:tshirts_id>/',views.tshirtsdetails,name="tshirtsdetails"),
 
 ]

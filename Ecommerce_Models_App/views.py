@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import tshirts
+from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def userhome(request):
@@ -31,5 +32,9 @@ def logins(request):
 
 def signups(request):
     return render(request,"Website/signup.html")
+
+def tshirtsdetails(request,tshirts_id):
+    detailsoftshirts= get_object_or_404(tshirts,pk=tshirts_id)
+    return render(request,'Website/tshirtsdetails.html',{'detailsoftshirts':detailsoftshirts})
 
 
