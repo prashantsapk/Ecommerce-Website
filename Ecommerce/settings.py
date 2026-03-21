@@ -117,3 +117,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
+
+# Define the URL prefix for media files
+MEDIA_URL = '/media/'
+
+# Define the directory where uploaded files will be stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

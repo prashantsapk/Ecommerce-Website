@@ -1,0 +1,15 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+ 
+
+{% for i in obj  %}
+
+{{i.Type}}<br>
+<img src="{{i.Image.url }}" > <br>
+{{i.Price}}
+
+{% endfor %}
+
+
+{% endblock content %}
