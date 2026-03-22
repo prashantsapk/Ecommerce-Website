@@ -1,6 +1,6 @@
 from django.urls import path,include
 from . import views
-from .views import homepageview,jeanview,sweaterview,tshirtview,bagpackview,otheraccessoriesview,pricingview
+from .views import homepageview,jeanview,sweaterview,tshirtview,bagpackview,otheraccessoriesview,pricingview,signupview,loginview
 
 
 
@@ -13,6 +13,8 @@ urlpatterns = [
     path('tshirt/',views.tshirtview,name='tshirt'),
     path('bagpack/',views.bagpackview,name='bagpack'),
     path('otheraccessories/',views.otheraccessoriesview,name='otheraccessories'),
+    path('signup/',views.signupview,name='signup'),
+    path('login/',views.loginview,name='login'),
     
 ]
 

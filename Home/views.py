@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import jeanmodel,tshirtmodel,sweatermodel,otheraccessoriesmodel,bagpackmodel
+from .forms import signupform,loginform
 
 
 # Create your views here.
@@ -33,4 +34,19 @@ def otheraccessoriesview(request):
 def pricingview(request):
 
     return render(request,'pricing.html')
+   
+def signupview(request):
+    if request.method=="POST":
+        signupobj = signupform(request.POST)
+        if signupobj.is_valid():
+            user = signupobj.save()
+    else:
+        signupobj = signupform()
+
+    return render(request,'signup.html',{'signupobj':signupobj})
+   
+def loginview(request):
+    loginobj = loginform()
+
+    return render(request,'login.html',{'loginobj':loginobj})
    

@@ -39,11 +39,19 @@
         </ul>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success me-md-2" type="submit">Search</button>
         </form>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="http://127.0.0.1:8000/home/signup/"><button class="btn btn-outline-success" type="button">Signup</button></a>
+    <a href="http://127.0.0.1:8000/home/login/"><button class="btn btn-outline-success" type="button">Login</button></a>
+    </div>
         </div>
     </div>
+    
+
     </nav>
+    
 
 
     {% block content %}
