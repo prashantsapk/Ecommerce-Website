@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import jeanmodel,tshirtmodel,sweatermodel,otheraccessoriesmodel,bagpackmodel
 from .forms import signupform,loginform
+from django.contrib.auth import login
 
 
 # Create your views here.
@@ -46,7 +47,14 @@ def signupview(request):
     return render(request,'signup.html',{'signupobj':signupobj})
    
 def loginview(request):
-    loginobj = loginform()
 
-    return render(request,'login.html',{'loginobj':loginobj})
+   if request.method=="POST":
+        loginobj = loginform(request.POST)
+        if loginobj.is_valid():
+            user = loginobj
+            login(user,request)
+            redirect('homepage')
+   else:
+        loginobj = loginform()
+        return render(request,'login.html',{'loginobj':loginobj})
    

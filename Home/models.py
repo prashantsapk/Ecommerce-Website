@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser #gpt
 
 # Create your models here.
 
@@ -51,5 +51,3 @@ class otheraccessoriesmodel(models.Model):
         return self.Type
     
     
-
-

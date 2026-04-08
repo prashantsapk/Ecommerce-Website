@@ -124,3 +124,5 @@ MEDIA_URL = '/media/'
 
 # Define the directory where uploaded files will be stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
